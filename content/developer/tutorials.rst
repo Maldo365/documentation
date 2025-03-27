@@ -17,12 +17,33 @@ Tutorials
    tutorials/mixins
    tutorials/pdf_reports
 
+<<<<<<< 5492d6e41614ea7e88e3685f9ee7fbc942e383d0
 .. tip::
    If you are new to Odoo development, we recommend starting with the :doc:`setup guide
    <tutorials/setup_guide>`.
 
 Learn the server and web frameworks
 ===================================
+||||||| 04b39810eefa96f87c20b6ba78ad71637c6f7633
+    tutorials/getting_started
+    tutorials/discover_js_framework
+    tutorials/master_odoo_web_framework
+    tutorials/define_module_data
+    tutorials/restrict_data_access
+    tutorials/unit_tests
+    tutorials/mixins
+    tutorials/pdf_reports
+=======
+    tutorials/getting_started
+    tutorials/discover_js_framework
+    tutorials/master_odoo_web_framework
+    tutorials/define_module_data
+    tutorials/restrict_data_access
+    tutorials/unit_tests
+    tutorials/mixins
+    tutorials/pdf_reports
+    tutorials/website_theme
+>>>>>>> 2a976d4649230e7495d9c5d4e99cbcef5a5d041d
 
 .. cards::
 
@@ -89,3 +110,9 @@ Expand your knowledge on the server framework
       :target: tutorials/pdf_reports
 
       Use QWeb, Odoo's powerful templating engine, to create custom PDF reports for your documents.
+
+   .. card:: Build a website theme
+      :target: tutorials/website_theme
+
+      Create a tailored website from scratch fully integrated with Odoo and editable via the Website
+      Builder.
