@@ -12,6 +12,7 @@ Odoo *Employees* organizes a company's employee records, contracts, and departme
    :titlesonly:
 
    employees/new_employee
+   employees/onboarding
    employees/departments
    employees/certifications
    employees/equipment
