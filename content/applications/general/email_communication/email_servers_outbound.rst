@@ -17,6 +17,19 @@ emails. The deliverability is optimized for this subdomain as it uses Odoo’s D
    If the database subdomain is `company-name.odoo.com` and all mailing configurations are the
    default ones, all emails will be sent from `notifications@company-name.odoo.com`.
 
+.. note::
+   This configuration is handled by the `mail.default.from_filter` system parameter. In cases where
+   the sender's domain does not match the value of this parameter, the notification address is used
+   instead.
+
+   Multiple values can be defined in this system parameter: comma-separated, domains, or full email
+   addresses are all allowed.
+
+   Once an :ref:`outgoing mail server is configured
+   <email-outbound-different-servers-personalized>`, the system parameter is no longer considered
+   and the value used is the :ref:`FROM filtering
+   <email-outbound-different-servers-personalized-from-filtering>` of the mail server.
+
 .. image:: email_servers_outbound/diagram-inbound-mailing-method.png
    :alt: Odoo’s default outbound messages configuration.
 
@@ -204,6 +217,9 @@ When an email is sent from Odoo, the following sequence is used to choose the ou
    To determine which server is first, Odoo uses the priority value (the lower the value is, the
    higher the priority is). Failing to do so, the first server is determined by the servers' names,
    using alphabetical order.
+
+- If there is no mail server, Odoo relies on the :ref:`system parameter <email-outbound-default>`
+  value.
 
 It is also possible to use Odoo's mail server for transactional emails in addition to mass mailings.
 
