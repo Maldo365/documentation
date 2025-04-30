@@ -4,13 +4,13 @@ Suggest quantities based on historical demand
 
 .. |RFQ| replace:: :abbr:`RFQ (request for quotation)`
 
-For a straightforward push-based replenishment strategy the *Suggest* feature recommends quantities
+For a straightforward push-based replenishment strategy, the *Suggest* feature recommends quantities
 to order on requests for quotations (RFQs) based on historical demand.
 
 Key parameters:
 
-- *Replenish for*: Number of days to cover future demand.
-- *Based on*: Period used to calculate average daily demand (e.g., last 7 days, last 30 days, last 3
+- *Replenish for*: number of days to cover future demand.
+- *Based on*: period used to calculate average daily demand (e.g., last 7 days, last 30 days, last 3
   months, last 12 months, or a past month/quarter).
 
 Odoo sums all validated deliveries in the *Based on* period and divides that total by the number of
@@ -34,18 +34,18 @@ Prerequisite setup
 ==================
 
 #. **Purchase** and **Inventory** apps must be installed
-#. :ref:`Validate at least one delivery order <inventory/delivery/one-step>` for each product
+#. :ref:`Validate at least one delivery order <inventory/delivery/one-step>` for each product.
 
    Ensures there is a past delivery record so the system can calculate average daily demand.
 
 #. :ref:`Add a vendor to the vendor pricelist <purchase/manage_deals/vendor-pricelist>` with a
-   purchase price for each product
+   purchase price for each product.
 
    The *Suggest* feature is vendor-specific, so each product needs a matching vendor for accurate
    purchase quantity and price suggestions.
 
 #. Set the *Product Type* to *Goods* and ensure the product is :ref:`Tracked by quantity
-   <inventory/product_management/manufacture>`
+   <inventory/product_management/manufacture>`.
 
    Ensures the system can manage stock levels and calculate recommended replenishment quantities for
    tangible items.
@@ -70,11 +70,11 @@ products from the |RFQ|.
 Within the :guilabel:`Catalog`, click the :guilabel:`Suggest` button to open the :guilabel:`Suggest
 Quantities based on Sales & Demands` pop-up window, where the suggestion parameters are specified:
 
-- :guilabel:`Replenish for`: Number of days intended to stock products
+- :guilabel:`Replenish for`: Number of days intended to stock products.
 - :guilabel:`Based on`: Historical period used to calculate average daily demand (e.g.,
-  :guilabel:`Last 30 Days`, :guilabel:`April 2024`)
+  :guilabel:`Last 30 Days`, :guilabel:`April 2024`).
 
-- :guilabel:`Percentage`: Portion of historical demand to apply (e.g., 100%, 30%)
+- :guilabel:`Percentage`: Portion of historical demand to apply (e.g., 100%, 30%).
 
 Once the parameters are confirmed, click :guilabel:`Compute` to calculate recommended quantities,
 which are auto-filled in each product's quantities in the catalog. Adjust amounts if needed, then
@@ -99,7 +99,7 @@ Historical Data:
 
 .. math::
 
-   Average~Daily~Demand = 40 \divide 30 \approx 1.33 \text{units/day}
+   Average~Daily~Demand = {40/30}  \approx 1.33 \text{units/day}
 
 Over 14 days, at 100% of historical demand, the system suggests:
 
@@ -132,7 +132,7 @@ demand of 5.71 units/day (approximately).
 
 .. math::
 
-   Average~Daily~Demand = 40 \divide 14 \approx 5.71 \text{units/day}
+   Average~Daily~Demand = {40/14} \approx 5.71 \text{units/day}
 
 Over 14 days, at 30% of historical demand, the system suggests:
 
